@@ -1,0 +1,20 @@
+curl --insecure -X POST https://glm-47-w8a8-models.apps.ocp.<test-url>/v1/chat/completions   -H "Authorization: Bearer <token>"   -H "Content-Type: application/json"   -d '{
+    "model": "glm-47-w8a8",-  
+    "messages": [
+      {"role": "user", "content": "Whats the capital of China?"}
+    ]
+  }'
+
+
+
+curl --insecure -X POST https://qwen3-235b-a22b-w8a8-models.apps.ocp.<test-url>/v1/chat/completions   -H "Authorization: Bearer <token>"   -H "Content-Type: application/json"   -d '{
+    "model": "qwen3-235b-a22b-w8a8",
+    "messages": [
+      {"role": "user", "content": "Whats the capital of China?"}
+    ]
+  }'
+  
+  
+curl --insecure -X POST -H "Content-Type: application/json" -d '{ "prompt": "What is the capital of France?", "max_tokens": 500}' https://guardrails-orchestrator-gateway-ai-demo.<test-url>/hap/v1/chat/completions | jq
+
+curl -s http://localhost:8000/v1/models | jq
